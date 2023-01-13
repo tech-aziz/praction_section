@@ -1,4 +1,4 @@
-import 'package:all_widgets/screens/product_details.dart';
+import 'package:all_widgets/screens/student_info.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,14 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-      
-        primarySwatch: Colors.blue,
-      ),
-      home: WidgetPractice()
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: const StudentInfo());
   }
 }
-

@@ -1,8 +1,8 @@
 import 'package:all_widgets/models/product.dart';
 import 'package:all_widgets/models/student_mode.dart';
+import 'package:all_widgets/screens/student_info.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
-
 import 'package:flutter/services.dart' show rootBundle;
 
 class WidgetPractice extends StatefulWidget {
@@ -13,36 +13,35 @@ class WidgetPractice extends StatefulWidget {
 }
 
 class _WidgetPracticeState extends State<WidgetPractice> {
-
   List<Product> productList = [
     Product(
         id: 01,
-        productName: 'Product One',
+        productName: 'Onion',
         image: "assets/images/app_icon.png",
         price: 13),
     Product(
         id: 02,
-        productName: 'Product Two',
+        productName: 'Garlic',
         image: "assets/images/food.png",
         price: 12),
     Product(
         id: 03,
-        productName: 'Product Three',
+        productName: 'Bell Pepper',
         image: "assets/images/food.png",
         price: 14),
     Product(
         id: 04,
-        productName: 'Product Four',
+        productName: 'Corn',
         image: "assets/images/food.png",
         price: 15),
     Product(
         id: 05,
-        productName: 'Product Four',
+        productName: 'Tomato',
         image: "assets/images/food.png",
         price: 16),
     Product(
         id: 06,
-        productName: 'Product Five',
+        productName: 'Mushrooms',
         image: "assets/images/food.png",
         price: 17),
   ];
@@ -50,7 +49,7 @@ class _WidgetPracticeState extends State<WidgetPractice> {
   // Future<List<Student>> _loadAStudentAsset() async {
   //   final jsonStudentData =
   //       await rootBundle.loadString('jsonfile/student.json');
-        
+
   //   final jsonStudentList = json.decode(jsonStudentData) as List<dynamic>;
   //   return jsonStudentList.map((e) => Student.fromJson(e)).toList();
   // }
@@ -127,8 +126,10 @@ class _WidgetPracticeState extends State<WidgetPractice> {
                     primary: false,
                     separatorBuilder: (context, index) {
                       return Divider(
+                        indent: 12,
+                        endIndent: 12,
                         thickness: 1,
-                        color: Colors.red,
+                        color: Colors.black12,
                       );
                     },
                     itemBuilder: ((context, index) {
@@ -136,7 +137,7 @@ class _WidgetPracticeState extends State<WidgetPractice> {
                         height: 100,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: Colors.black, width: 2)),
+                            border: Border.all(color: Colors.black, width: 1)),
                         width: MediaQuery.of(context).size.width,
                         child: Row(
                           children: [
@@ -149,15 +150,28 @@ class _WidgetPracticeState extends State<WidgetPractice> {
                                       productList[index].image.toString()),
                                 )),
                             Expanded(
-                              flex: 2,
-                              child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text(productList[index]
-                                        .productName
-                                        .toString()),
-                                    Text(productList[index].price.toString()),
-                                  ]),
+                              flex: 3,
+                              child: Padding(
+                                padding: const EdgeInsets.only(right: 20),
+                                child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    children: [
+                                      Text(
+                                        productList[index]
+                                            .productName
+                                            .toString(),
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black,
+                                            fontSize: 15),
+                                      ),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      Text(productList[index].price.toString()),
+                                    ]),
+                              ),
                             )
                           ],
                         ),
@@ -167,11 +181,15 @@ class _WidgetPracticeState extends State<WidgetPractice> {
                 SizedBox(
                   height: 12,
                 ),
-
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => StudentInfo()));
+                    },
+                    child: Text('Next Page'))
               ],
             ),
           ),
-        )
-        );
+        ));
   }
 }
