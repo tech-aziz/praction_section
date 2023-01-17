@@ -1,4 +1,5 @@
-import 'package:all_widgets/screens/student_info.dart';
+import 'package:all_widgets/screens/nested_json_map.dart';
+import 'package:all_widgets/screens/product_details.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,6 +18,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const StudentInfo());
+        home: const NestedJson());
   }
 }

@@ -1,0 +1,43 @@
+[
+    {
+        "id":"1",
+        "name":"Sari",
+        "image":"https://m.media-amazon.com/images/I/51vbWbmiU5L._SS400_.jpg",
+        "price":22.0,
+        "isSold":true
+
+    },
+    {
+        "id":"2",
+        "name":"Longi",
+        "image":"https://images.miah.shop/product/Amanat_Shah_Lungi_Luxury_1003_4260_1.jpg",
+        "price":30.0,
+        "isSold":false
+
+    },
+    {
+        "id":"3",
+        "name":"Three Piece",
+        "image":"https://www.saffron.com.bd/images/detailed/195/20-removebg-preview.jpg",
+        "price":40.0,
+        "isSold":true
+
+    },
+
+    {
+        "id":"4",
+        "name":"Gancha",
+        "image":"https://images.okr.ro/serve/product/4579feadcc9df8125aa7357d9383c144-327964-235_235_10",
+        "price":50.0,
+        "isSold":true
+
+    },
+    {
+        "id":"5",
+        "name":"Lehenga",
+        "image":"https://www.brides.com/thmb/1lmOpoYD8rwP02ui8rPO7kZW3So=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/amand-and-kyle-wedding-07-2fdc33196b0e465886e4f75cbfad21b9.jpg",
+        "price":50.0,
+        "isSold":true
+
+    }
+]

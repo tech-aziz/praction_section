@@ -10,6 +10,7 @@ class StudentInfo extends StatefulWidget {
 }
 
 class _StudentInfoState extends State<StudentInfo> {
+
   List<StudentModel?> studentList = [];
 
   @override
@@ -32,12 +33,17 @@ class _StudentInfoState extends State<StudentInfo> {
 
 
  //do same task but different function
-  fetchStudentData() async {
-    final jsonStudentData =
-        await rootBundle.loadString('jsonfile/student.json');
-    var studentInfo = studentModelFromJson(jsonStudentData);
-    studentList.addAll(studentInfo);
+  // fetchStudentData() async {
+  //   final jsonStudentData =
+  //       await rootBundle.loadString('jsonfile/student.json');
+  //   var studentInfo = studentModelFromJson(jsonStudentData);
+  //   studentList.addAll(studentInfo);
     
+  // }
+  fetchStudentData()async{
+    final jsonData = await rootBundle.loadString("jsonfile/student.json");
+    final studentInfo = studentModelFromJson(jsonData);
+    studentList.addAll(studentInfo);
   }
 
   // Future<List<StudentModel?>> _loadAStudentAsset() async {
@@ -65,7 +71,7 @@ class _StudentInfoState extends State<StudentInfo> {
                   return ListTile(
                     leading: CircleAvatar(
                       radius: 20,
-                      child: Text(studentList[index]!.id!.toString()),
+                      child: Text(studentList[index]!.id!),
                     ),
                     title: Text(studentList[index]!.name!.toString()),
                     trailing: Text(studentList[index]!.score!.toString()),

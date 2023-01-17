@@ -1,8 +1,7 @@
 import 'package:all_widgets/models/product.dart';
-import 'package:all_widgets/models/student_mode.dart';
+import 'package:all_widgets/screens/showUsersDetails.dart';
 import 'package:all_widgets/screens/student_info.dart';
 import 'package:flutter/material.dart';
-import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 
 class WidgetPractice extends StatefulWidget {
@@ -13,6 +12,7 @@ class WidgetPractice extends StatefulWidget {
 }
 
 class _WidgetPracticeState extends State<WidgetPractice> {
+  
   List<Product> productList = [
     Product(
         id: 01,
@@ -184,7 +184,7 @@ class _WidgetPracticeState extends State<WidgetPractice> {
                 ElevatedButton(
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => StudentInfo()));
+                          builder: (context) => ShowUsersDetails()));
                     },
                     child: Text('Next Page'))
               ],
