@@ -1,5 +1,4 @@
 import 'package:all_widgets/screens/nested_json_map.dart';
-import 'package:all_widgets/screens/product_details.dart';
 import 'package:flutter/material.dart';
 
 void main() {
