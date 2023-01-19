@@ -12,6 +12,32 @@ class NestedJson extends StatefulWidget {
 
 class _NestedJsonState extends State<NestedJson>
     with SingleTickerProviderStateMixin {
+
+
+  List myList = [
+    {
+      "name": "azizul hakim",
+      "age": 26,
+      "city": "Dhaka",
+      "address": [
+        {"country": "Bangladesh", "city": "Dhaka"},
+        {"country": "Chaina", "city": "Shanhai"}
+      ]
+    },
+    {
+      "name": "Nazmul Hasan",
+      "age": 21,
+      "city": "Tangail",
+      "address": [
+        {"country": "Singapure", "city": "singa"},
+        {"country": "India", "city": "new dilhi"}
+      ]
+    }
+  ];
+
+  
+
+
   Map<String, dynamic> myMap = {
     "name": "azizul hakim",
     "age": 26,
@@ -21,6 +47,9 @@ class _NestedJsonState extends State<NestedJson>
       {"country": "Chaina", "city": "Shanhai"}
     ]
   };
+
+
+
 
   TabController? _tabController;
 
@@ -53,7 +82,7 @@ class _NestedJsonState extends State<NestedJson>
             ),
             Tab(
               icon: Icon(Icons.heart_broken),
-              text: 'Love',
+              text: 'Show List',
             )
           ],
         ),
@@ -90,7 +119,9 @@ class _NestedJsonState extends State<NestedJson>
           )),
           Center(child: Text('Share')),
           Center(child: Text('Location')),
-          Center(child: Text('Love'))
+          Center(
+            child: Text(myList[1]!['address'][0]!['city']!.toString()),
+          )
         ],
       ),
     );
