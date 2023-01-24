@@ -1,5 +1,6 @@
 import 'package:all_widgets/screens/alertDialog/alernButton.dart';
 import 'package:all_widgets/screens/nested_json_map.dart';
+import 'package:all_widgets/screens/screenOrientation/screen_orientation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,6 +19,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const AlertButton());
+        home: const Screen_Orientation());
   }
 }

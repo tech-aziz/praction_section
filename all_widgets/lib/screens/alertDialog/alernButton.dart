@@ -9,6 +9,19 @@ class AlertButton extends StatefulWidget {
 }
 
 class _AlertButtonState extends State<AlertButton> {
+
+  conditionalMethod(){
+    double b = 12.12;
+    if(b == 1){
+      print('Value is not equal');
+    }
+    else if(b == 12.22){
+      print('Value is equal');
+    }
+    else{
+      print('Unknown');
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,6 +33,7 @@ class _AlertButtonState extends State<AlertButton> {
               child: ElevatedButton(
             child: Text('Show Dialog'),
             onPressed: () {
+              conditionalMethod();
               showDialog(
                 context: context, 
                 builder: (context){
