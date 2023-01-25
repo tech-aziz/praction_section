@@ -1,4 +1,5 @@
 import 'package:all_widgets/screens/alertDialog/alernButton.dart';
+import 'package:all_widgets/screens/difference_condition/condition.dart';
 import 'package:all_widgets/screens/nested_json_map.dart';
 import 'package:all_widgets/screens/screenOrientation/screen_orientation.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +20,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const Screen_Orientation());
+        home: const ConditionalLogic());
   }
 }
